@@ -1,9 +1,9 @@
-import React from 'react';
-import { SearchBar } from './components/SearchBar';
-import { WeatherCard } from './components/WeatherCard';
-import { MapView } from './components/MapView';
-import { RecentCities } from './components/RecentCities';
-import { useWeatherContext } from './context/WeatherContext';
+import React from "react";
+import { SearchBar } from "./components/SearchBar";
+import { WeatherCard } from "./components/WeatherCard";
+import { MapView } from "./components/MapView";
+import { RecentCities } from "./components/RecentCities";
+import { useWeatherContext } from "./context/WeatherContext";
 
 const App: React.FC = () => {
   const { state } = useWeatherContext();
@@ -16,9 +16,7 @@ const App: React.FC = () => {
           <WeatherCard />
           <RecentCities />
         </div>
-        <div className="md:col-span-2">
-          {state.selected && <MapView />}
-        </div>
+        <div className="md:col-span-2">{state.selected && <MapView />}</div>
       </div>
     </div>
   );
